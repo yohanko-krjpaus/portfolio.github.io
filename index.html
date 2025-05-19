@@ -8,11 +8,22 @@
 </head>
 <body>
   <div class="container">
+    <!-- 🌙 Dark Mode Toggle -->
+    <button id="theme-toggle">🌙 Toggle Dark Mode</button>
+
+    <!-- 🖼️ Profile Section -->
     <header>
+      <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
       <h1>Your Name</h1>
       <p class="subtitle">Aspiring Data Analyst | Web Developer | Student</p>
+      <div class="social-buttons">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="resume.pdf" download>Resume</a>
+      </div>
     </header>
 
+    <!-- 👋 About -->
     <section class="about">
       <h2>About Me</h2>
       <p>
@@ -20,6 +31,25 @@
       </p>
     </section>
 
+    <!-- 🎓 Education -->
+    <section class="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Business Analytics</strong><br>Macquarie University, Sydney<br>2023 – 2026 (Expected)</p>
+    </section>
+
+    <!-- 🛠️ Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>📊 Python (Pandas, NumPy, Streamlit)</li>
+        <li>🖥️ R & R Markdown</li>
+        <li>🌐 HTML/CSS/JavaScript</li>
+        <li>📂 Git & GitHub</li>
+        <li>📈 Data Visualisation</li>
+      </ul>
+    </section>
+
+    <!-- 🧪 Projects -->
     <section class="projects">
       <h2>Projects</h2>
       <div class="project-card">
@@ -34,15 +64,24 @@
       </div>
     </section>
 
+    <!-- 📫 Contact -->
     <section class="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">@yourusername</a></p>
     </section>
 
+    <!-- 📜 Footer -->
     <footer>
       <p>© 2025 Your Name</p>
     </footer>
   </div>
+
+  <script>
+    // 🌙 Dark mode toggle
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>

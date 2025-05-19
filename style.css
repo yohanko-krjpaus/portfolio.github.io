@@ -3,6 +3,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   .container {
@@ -24,6 +25,30 @@ body {
     font-style: italic;
   }
   
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #ccc;
+  }
+  
+  .social-buttons a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 14px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .social-buttons a:hover {
+    background-color: #005f99;
+  }
+  
   h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 5px;
@@ -42,6 +67,15 @@ body {
     margin-top: 0;
   }
   
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills li {
+    padding: 6px 0;
+  }
+  
   a {
     color: #007acc;
     text-decoration: none;
@@ -55,4 +89,41 @@ body {
     text-align: center;
     margin-top: 40px;
     color: #aaa;
+  }
+  
+  #theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  body.dark {
+    background-color: #111;
+    color: #eee;
+  }
+  
+  body.dark .container {
+    background-color: #222;
+  }
+  
+  body.dark a {
+    color: #6ab7ff;
+  }
+  
+  body.dark .social-buttons a {
+    background-color: #555;
+  }
+  
+  body.dark .social-buttons a:hover {
+    background-color: #888;
+  }
+  
+  body.dark #theme-toggle {
+    background-color: #333;
+    color: #fff;
   }
