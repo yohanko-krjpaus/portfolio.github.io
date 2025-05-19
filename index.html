@@ -8,10 +8,9 @@
 </head>
 <body>
   <div class="container">
-    
 
     <!-- 🖼️ Profile Section -->
-    <header>
+    <header class="fade-in">
       <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
       <h1>Your Name</h1>
       <p class="subtitle">Aspiring Data Analyst | Web Developer | Student</p>
@@ -23,7 +22,7 @@
     </header>
 
     <!-- 👋 About -->
-    <section class="about">
+    <section class="about fade-in">
       <h2>About Me</h2>
       <p>
         I'm a university student passionate about data, technology, and building useful digital tools. I enjoy turning complex ideas into simple solutions.
@@ -31,13 +30,13 @@
     </section>
 
     <!-- 🎓 Education -->
-    <section class="education">
+    <section class="education fade-in">
       <h2>Education</h2>
       <p><strong>Bachelor of Business Analytics</strong><br>Macquarie University, Sydney<br>2023 – 2026 (Expected)</p>
     </section>
 
     <!-- 🛠️ Skills -->
-    <section class="skills">
+    <section class="skills fade-in">
       <h2>Skills</h2>
       <ul>
         <li>📊 Python (Pandas, NumPy, Streamlit)</li>
@@ -49,7 +48,7 @@
     </section>
 
     <!-- 🧪 Projects -->
-    <section class="projects">
+    <section class="projects fade-in">
       <h2>Projects</h2>
       <div class="project-card">
         <h3>📊 Data Dashboard</h3>
@@ -64,15 +63,36 @@
     </section>
 
     <!-- 📫 Contact -->
-    <section class="contact">
+    <section class="contact fade-in">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </section>
 
     <!-- 📜 Footer -->
-    <footer>
+    <footer class="fade-in">
       <p>© 2025 Your Name</p>
     </footer>
+
   </div>
 
-  
+  <!-- ✨ Fade-In Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    faders.forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
