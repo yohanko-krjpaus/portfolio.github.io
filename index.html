@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+
   <div class="container">
 
     <!-- 🖼️ Profile Section -->
     <header class="fade-in">
       <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
-      <h1>Yohan Ko</h1>
+      <h1 class="profile-name">Yohan Ko</h1/>
       <p class="subtitle">Business Analytics Student | Trilingual Translator | Diplomacy Enthusiast</p>
       <div class="social-buttons">
         <a href="https://github.com/yohanko-krjpaus" target="_blank">GitHub</a>
@@ -24,40 +24,40 @@
 
     <!-- 👋 About -->
     <section class="about fade-in">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
       <p>
-        I'm a university student passionate about data, technology, and building useful digital tools. I enjoy turning complex ideas into simple solutions.
+        I'm a university student passionate about data, technology, and building useful digital tools. I enjoy turning complex ideas into simple solutions.  My trilingual abilities (Korean, Japanese, and English) give me a unique perspective on global data trends and the ability to effectively communicate insights across cultures. I am eager to apply my skills in the data analysis market to address challenges on a global scale.
       </p>
     </section>
 
     <!-- 🎓 Education -->
     <section class="education fade-in">
-      <h2>Education</h2>
-      <p><strong>Bachelor of Business Analytics</strong><br>Macquarie University, Sydney<br>2024 – 2027 (Expected)</p>
+      <h2 class="section-title">Education</h2>
+      <p><strong class="degree-name">Bachelor of Business Analytics</strong><br>Macquarie University, Sydney<br>2024 – 2027 (Expected)</p>
     </section>
 
     <!-- 🛠️ Skills -->
     <section class="skills fade-in">
-      <h2>Skills</h2>
-      <ul>
-        <li>📊 Python (Pandas, NumPy, Streamlit)</li>
-        <li>🖥️ R & R Markdown</li>
-        <li>🌐 HTML/CSS/JavaScript</li>
-        <li>📂 Git & GitHub</li>
-        <li>📈 Data Visualisation (Tableau, Power BI)</li>
+      <h2 class="section-title">Skills</h2>
+      <ul class="skill-list">
+        <li class="skill">📊 Python (Pandas, NumPy, Streamlit)</li>
+        <li class="skill">🖥️ R & R Markdown</li>
+        <li class="skill">🌐 HTML/CSS/JavaScript</li>
+        <li class="skill">📂 Git & GitHub</li>
+        <li class="skill">📈 Data Visualisation (Tableau, Power BI)</li>
       </ul>
     </section>
 
     <!-- 🧪 Projects -->
     <section class="projects fade-in">
-      <h2>Projects</h2>
+      <h2 class="section-title">Projects</h2>
       <div class="project-card">
-        <h3>📊 Data Dashboard</h3>
+        <h3 class="project-title">📊 Data Dashboard</h3>
         <p>Built a real-time dashboard using Python, Pandas, and Streamlit. Visualises sales trends from a CSV file.</p>
         <a href="#">View on GitHub</a>
       </div>
       <div class="project-card">
-        <h3>🌐 Portfolio Website</h3>
+        <h3 class="project-title">🌐 Portfolio Website</h3>
         <p>This very site, built with HTML and CSS, and hosted on GitHub Pages.</p>
         <a href="#">View Repo</a>
       </div>
@@ -65,35 +65,10 @@
 
     <!-- 📫 Contact -->
     <section class="contact fade-in">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:youremail@example.com">yhn.jn.ko@gmail.com</a></p>
+      <h2 class="section-title">Contact</h2>
+      <p>Feel free to reach out!</p>
     </section>
 
-    <!-- 📜 Footer -->
-    <footer class="fade-in">
-      <p>© 2025 Yohan Ko</p>
-    </footer>
-
   </div>
-
-  <!-- ✨ Fade-In Script -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    faders.forEach(el => {
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
