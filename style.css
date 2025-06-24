@@ -18,14 +18,25 @@ body {
     border-radius: 10px;
   }
   
-  header {
-    text-align: center;
-    margin-bottom: 40px;
+
+  header h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #222;
   }
-  
-  .subtitle {
-    color: #777;
-    font-style: italic;
+
+  header .subtitle {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  color: #666;
+  }
+
+  header h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  margin: 10px auto 0;
+  border-bottom: 3px solid #007acc;
   }
   
   .profile-img {
@@ -58,16 +69,34 @@ body {
     margin-top: 40px;
   }
   
-  .project-card {
+    .project-card {
     background: #f9f9f9;
     border-left: 4px solid #007acc;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  
-  .project-card h3 {
-    margin-top: 0;
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-text h3 {
+    margin: 0 0 10px;
+    color: #007acc;
+  }
+
+  .project-text p {
+    margin: 0 0 10px;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .project-text a {
+    font-weight: bold;
+    font-size: 0.9rem;
   }
   
   ul {
